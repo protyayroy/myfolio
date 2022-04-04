@@ -1,0 +1,393 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    color: #444;
+}
+hr {
+	margin: 0;
+	color: inherit;
+	background-color: currentColor;
+	border: 0;
+	opacity: 0.50;
+}
+/* banner part */
+.top-banner{
+    background: url("../image/banner-img.png"),no-repeat,center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-position-x: center;
+}
+.top-banner::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.top-banner .typed h1{
+    color: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    z-index: 2;
+}
+.top-banner .typed h1 .type,.top-banner .typed h1 .typed-cursor{
+    color: rgb(255, 208, 0);
+}
+/* navbar/menu part */
+.navbar-brand{
+    font-size: 35px;
+    font-weight: 800;
+    color: rgb(255, 208, 0) !important;
+    font-style: italic;
+    padding-top: 0;
+    padding-bottom: 0;    
+}
+.navbar-brand span{
+    color: rgba(255, 0, 0, 0.70);
+}
+.navbar-light .navbar-toggler {
+	color: transparent;
+	border-color: rgba(255, 255, 255, 0.452);
+}
+#top .navbar-light .navbar-nav .nav-link {
+	color: #fff;
+}
+#top .navbar-light .navbar-nav .nav-link:hover {
+	color: #222;
+}
+.navbar-toggler:focus {
+    color: transparent;
+}
+.navbar-light .navbar-toggler-icon{
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='255 255 255'%3e%3cpath stroke='rgba(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+/* about part */
+#about{
+    padding-top: 80px;
+    background: #f1f1f1;
+
+}
+.about-head h3{
+    font-weight: 700;
+    position: relative;
+}
+.about-head h3::after{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: -10%;
+    width: 120%;
+    height: 3px;
+    background: rgba(255, 0, 0, 0.70);
+}
+@media(max-width:767.9px){
+    .about-body p{
+        font-size: 16px;
+        text-align: left !important;
+    }
+
+}
+
+/* my work part */
+#my-work{
+    padding-top: 80px;
+    background: #f1f1f1;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.work-slider img{
+    height: 80vh;
+}
+@media(min-width:576px) and ( max-width:1199.9px){
+    #my-work .work-slider .row{
+        --bs-gutter-x: .5rem !important;
+    }
+}
+/* work slider button */
+#my-work ul.slick-dots {
+	position: absolute;
+	left: 49%;
+	transform: translateX(-50%);
+	display: flex !important;
+	flex-direction: row !important;
+}
+#my-work ul.slick-dots li{
+    list-style-type: none;
+    margin-right: 10px;
+}
+#my-work ul.slick-dots li.slick-active button{
+    background: green;
+}
+#my-work ul.slick-dots li button{
+    font-size: 0;
+    height: 20px;
+    width: 20px;
+    background: red;
+    border-radius: 50%;
+    border: 2px solid rgb(65, 64, 64);
+}
+/* progress bar */
+#progress-bar{
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background: #f1f1f1;
+}
+
+.txt span{
+    font-size: 18px;
+    font-weight: 600;
+    /* color: #fff; */
+    text-transform: uppercase;
+}
+.bar{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: #fff;
+    margin: 10px 0 30px;
+    border-radius: 15px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 3s cubic-bezier(0.8, .99, 0.8, .99) forwards;
+    box-shadow: inset 1px 1px 10px rgb(144, 144, 144),
+                inset -1px -1px 10px rgb(110, 110, 110),
+                1px 1px 5px rgb(15, 15, 15, 0.856),
+                -1px -1px 5px rgba(24, 24, 24, 0.856);
+            
+}
+@keyframes animate{
+    100%{
+      transform: scaleX(1);
+  
+    }
+  }
+.bar span{
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(to right,rgb(223, 13, 13),rgb(255, 208, 0));
+    border-radius: 15px;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: ani 3s 2s cubic-bezier(0.8, .99, 0.8, .99) forwards;
+}
+@keyframes ani{
+  100%{
+    transform: scaleX(1);
+
+  }
+}
+.bar span.html{
+    width: 90%;
+}
+.bar span.css{
+    width: 85%;
+}
+.bar span.jquery{
+    width: 60%;
+}
+.bar span.java{
+    width: 40%;
+}
+.bar span.bootstrap{
+    width: 80%;
+}
+.bar span::after{
+    position: absolute;
+    content: "";
+    border-bottom: 5px solid transparent;
+    border-top: 5px solid rgb(22, 22, 22);
+    border-right: 5px solid rgb(0, 0, 0);
+    border-left: 5px solid transparent;
+    top: -20px;
+    right: 0;
+}
+.bar span::before {
+	position: absolute;
+	content: "";
+	background: rgb(0, 0, 0);
+	right: 0;
+	top: -32px;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 0 5px;
+	color: #fff;
+	z-index: 1;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.bar span.html::before{
+    content: "90%";
+}
+.bar span.css::before{
+    content: "85%";
+}
+.bar span.jquery::before{
+    content: "60%";
+}
+.bar span.java::before{
+    content: "40%";
+}
+.bar span.bootstrap::before{
+    content: "80%";
+}
+
+/* footer part */
+#footer{
+    background: #000;
+    padding-top: 30px;
+}
+#footer .footer-body label{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-align: left !important;
+}
+#footer .footer-body .input-box input{
+    width: 100%;
+    padding: 3px 20px;
+    margin: 5px 0 15px;
+    border-radius: 5px;
+    border: transparent;
+    background: #f1f1f1;
+}
+textarea{
+    width: 100%;
+    margin: 5px 0 15px;
+    padding: 3px 20px;
+    border: transparent;
+    border-radius: 5px;
+    background: #f1f1f1;
+
+}
+#footer .footer-body .input-box .btn-primary{
+    background: rgb(29, 29, 219);
+    transition: all linear 0.4s;
+}
+#footer .footer-body .input-box .btn-primary:hover{
+    background: rgb(5, 121, 30);
+}
+.footer-head h3{
+    font-weight: 700;
+    position: relative;
+    color: #fff;
+}
+.footer-head h3::after{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: -10%;
+    width: 120%;
+    height: 3px;
+    background: rgba(255, 0, 0, 0.70);
+}
+.address-head h5{
+    color: #fff;
+}
+#footer .footer-body .address-body{
+    line-height: 40px;
+    font-size: 14px;
+}
+#footer .footer-body .social-link a{
+    margin-right: 8px;
+}
+#footer .footer-body .social-link a i{
+    font-size: 40px;
+    color: #f1f1f1;
+    transition: all linear 0.4s;
+
+}
+#footer .footer-body .social-link a:hover i{
+    color: rgb(27, 57, 223);
+}
+#footer .footer-down{
+    height: 50px;
+    background:  rgba(var(--bs-secondary-rgb),var(--bs-bg-opacity));
+    margin-top: 20px;
+}
+#footer .footer-down span{
+    line-height: 50px;
+    color: #fff;
+}
+hr{
+    height: 2px;
+    background: #fff;
+}
+/* footer end */
+/* menu fix */
+.menu{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 99;
+}
+.menu-fix{
+    position: fixed;
+    top: 0;
+    margin: auto;
+    z-index: 999;
+    width: 100%;
+    height: 50px !important;
+}
+.menu-fix .navbar {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+.menu-fix .navbar-brand {
+    font-size: 27px;
+}
+#top .nav-item .active{
+    background: rgba(255, 0, 0, 0.678);
+    color: #222 !important;
+    border-radius: 5px;
+}
+/* preloder css */
+#preloader{
+    background: #222222 url(../image/new-preloader.gif) no-repeat center;
+    background-size: 800px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* responsive css */
+@media(max-width:991.9px){
+    #my-work{
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    #about{
+        padding-top: 40px;
+    }
+    #footer{
+        padding-top: 20px;
+    }
+    #progress-bar{
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+    .menu ul.navbar-nav .nav-item{
+        text-align: center;
+    }
+    .menu ul.navbar-nav{
+        border-top: 1px solid rgba(34, 34, 34, 0.2);
+        margin-top: 5px;
+    }
+}
+@media(max-width:362.9px){
+    #footer .footer-down span{
+        line-height: normal;
+    }
+}
+
